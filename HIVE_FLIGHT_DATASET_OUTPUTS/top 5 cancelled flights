@@ -1,0 +1,22 @@
+SELECT flight_num,COUNT(cancelled) as t FROM output_delayed_flight
+WHERE cancelled= 1 
+GROUP BY flight_num
+ORDER BY t DESC
+LIMIT 10
+
+
+
+
+output ==
+
+
+6680    5
+2016    3
+7151    3
+5832    2
+3928    2
+7282    2
+5405    2
+353     2
+1145    2
+6787    2

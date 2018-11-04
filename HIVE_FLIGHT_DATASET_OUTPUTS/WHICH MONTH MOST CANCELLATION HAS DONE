@@ -1,0 +1,27 @@
+  
+
+THE DATASET has been stored in '/user/hive/output_delayed_flight ' in the HIVE 
+
+the dataser has been in the pig load 'desktop/DelayedFlight.csv'
+
+
+
+
+year INT ,month INT ,flight_num INT,destination STRING,cancelled INT,cancel_code STRING,diversion INT,origin STRING    (these are the data types)
+
+
+
+
+
+SELECT month,COUNT(cancelled) as t FROM output_delayed_flight
+WHERE cancelled= 1 AND cancel_code = 'B'
+GROUP BY month
+ORDER BY t DESC
+LIMIT 1
+
+
+
+
+
+
+output =12    250

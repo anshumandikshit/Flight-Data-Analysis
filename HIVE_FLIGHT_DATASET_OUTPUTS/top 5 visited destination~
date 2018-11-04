@@ -1,0 +1,4 @@
+SELECT destination,COUNT(dest) as p FROM output_delayed_flight
+GROUP BY destination
+ORDER BY p DESC
+LIMIT 5

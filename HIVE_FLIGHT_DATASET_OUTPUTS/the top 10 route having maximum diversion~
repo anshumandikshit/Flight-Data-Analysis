@@ -1,0 +1,5 @@
+SELECT origin,destination,COUNT(diversion) as d FROM output_delayed_flight
+WHERE diversion = 1
+GROUP BY origin,destination
+ORDER BY d DESC
+LIMIT 10;

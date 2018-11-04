@@ -1,0 +1,17 @@
+SELECT destination,COUNT(destination) as p FROM output_delayed_flight
+GROUP BY destination
+ORDER BY p DESC
+LIMIT 5
+
+
+
+
+
+output = 
+
+
+ORD     108984
+ATL     106898
+DFW     70657
+DEN     63003
+LAX     59969
